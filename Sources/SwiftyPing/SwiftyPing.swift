@@ -598,7 +598,7 @@ public class SwiftyPing: NSObject {
     // MARK: - ICMP package
     
     /// Creates an ICMP package.
-    private func createICMPPackage(identifier: UInt16, sequenceNumber: UInt16) throws -> Data {
+    public func createICMPPackage(identifier: UInt16, sequenceNumber: UInt16) throws -> Data {
         var header = ICMPHeader(type: ICMPType.EchoRequest.rawValue,
                                 code: 0,
                                 checksum: 0,
